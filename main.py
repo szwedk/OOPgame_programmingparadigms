@@ -100,7 +100,7 @@ class Game:
         commands = "search | fix engine | drive | move | inventory | exit"
         while True:
             print(self.current_location.description)
-            command = input(f"What would you like to do? \n {*commands,}\n")
+            command = input(f"\nWhat would you like to do? \n {commands}\n")
             if command == "search":
                 self.search()
             elif command == "fix engine":
