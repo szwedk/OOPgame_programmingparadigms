@@ -90,17 +90,20 @@ class Car:
     def open_treasure_map(self):
         if "map" not in self.treasure_map:
             print("\nYou don't have a treasure map!")
+            time.sleep(1)
             return
         else:
             print(map)
 
     def fix_engine(self):
         if "Wrench" not in self.tools:
-            print("\nYou can't fix the engine without a wrench!")
+            print("\nYou can't fix the engine without a wrench!\n")
+            time.sleep(1)
             return
 
         if "Spark Plug" not in self.parts:
-            print("\nYou can't fix the engine without a spark plug!")
+            print("\nYou can't fix the engine without a spark plug!\n")
+            time.sleep(1)
             return
 
         self.engine.fix()
@@ -108,9 +111,11 @@ class Car:
     def drive(self):
         if not self.engine.is_fixed:
             print("\nThe car won't start without a working engine.")
+            time.sleep(1)
             return
-
-        print("\nYou start the car and take it for a spin. The engine sounds great!\n VROOOOOOM VROOOOOOM\nVROOOOOOOOOOOOOM\nzoom zoom zoom\n")
+        else:
+            time.sleep(1)
+            print("\nYou start the car and take it for a spin. The engine sounds great!\n VROOOOOOM VROOOOOOM\nVROOOOOOOOOOOOOM\nzoom zoom zoom\n")
 
 class Engine:
     def __init__(self):
@@ -141,25 +146,32 @@ class Game:
             next_location = rooms[self.current_location][direction]
             self.current_location = next_location
         except KeyError:
-            print("You can't go in that direction.")
+            time.sleep(1)
+            print("\nYou can't go in that direction.")
 
     def game_loop(self):
-        commands = "search | fix engine | drive | move | inventory | map |exit"
+        commands = "search | fix engine | drive | move | inventory | map | exit"
         while True:
             print(self.current_location.description)
-            command = input(f"\nWhat would you like to do? \n {commands}\n").lower()
+            command = input(f"\n\nWhat would you like to do? \n {commands}\n").lower()
             if command == "search":
+                time.sleep(1)
                 self.search()
             elif command == "fix engine":
+                time.sleep(1)
                 self.car.fix_engine()
             elif command == "drive":
+                time.sleep(1)
                 self.car.drive()
             elif command == "move":
+                time.sleep(1)
                 direction = input("\nWhich direction do you want to move? (North, South, East, West) ")
                 self.move(direction.capitalize())
             elif command == "inventory":
+                time.sleep(1)
                 print("\nInventory: " + ", ".join(self.player.inventory))
             elif command == "map":
+                time.sleep(1)
                 self.car.open_treasure_map()
             elif command == "exit":
                 print("\nThanks for playing!")
@@ -196,7 +208,7 @@ class Game:
             print("There is nothing to search here.")
 
 if __name__ == "__main__":
-    print("\nWelcome to the car repair game!")
+    print("\nWelcome to the car repair game!\n")
     time.sleep(1)
     print("Your objective is to find the tools and parts to fix the car.")
     time.sleep(2)
