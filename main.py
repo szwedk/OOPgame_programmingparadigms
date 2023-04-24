@@ -15,7 +15,7 @@ class Location:
         self.east = east
         self.west = west
 
-# instances of Location class for each room
+
 home = Location("You are in your cozy home.")
 garage = Location("You enter the garage and see a car with its hood up.")
 store = Location("You are inside a store full of car parts and tools.")
@@ -26,7 +26,7 @@ class Player:
         self.name = name
         self.inventory = []
 
-    def add_to_inventory(self, item):
+    def add_inventory(self, item):
         self.inventory.append(item)
 
 class Car:
@@ -64,6 +64,7 @@ class Car:
 
         print("You start the car and take it for a spin. The engine sounds great!")
 
+
 class Engine:
     def __init__(self):
         self.is_fixed = False
@@ -74,10 +75,12 @@ class Engine:
         print("The engine is now fixed!")
         self.is_fixed = True
 
+
 class Game:
     def __init__(self, player):
         self.player = player
         self.car = Car()
+        self.inventory = []
         self.current_location = home
 
     def move(self, direction):
@@ -95,6 +98,7 @@ class Game:
             self.current_location = next_location
         else:
             print("Invalid direction.")
+
 
     def game_loop(self):
         commands = "search | fix engine | drive | move | inventory | exit"
@@ -122,15 +126,14 @@ class Game:
         if self.current_location == garage:
             print("You search the garage and find some tools and spare parts.")
             self.car.add_tool("Wrench")
-            self.car.add_part("Spark Plug")
             time.sleep(1)
         elif self.current_location == store:
             print("You search the store and find some useful items.")
-            self.player.add_to_inventory("Screwdriver")
+            self.player.add_inventory("Screwdriver")
             time.sleep(1)
         elif self.current_location == junkyard:
             print("You search the junkyard and find some useful parts.")
-            self.car.add_part("Alternator")
+            self.car.add_part("Spark Plug")
             time.sleep(1)
         else:
             print("There is nothing to search here.")
