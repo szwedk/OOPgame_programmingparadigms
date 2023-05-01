@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" modified="2023-04-26T22:42:57.187Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="ckA1_hujIrk3tJfbNNx5" version="21.2.1" type="device">
+  <diagram name="Page-1" id="iuzewAjcS1F5TYqzKa39">
+    <mxGraphModel dx="2156" dy="1845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KohGji0QIOgP2t7-RK-n-1" value="&lt;div style=&quot;box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); margin: 0px; padding: 0px; line-height: inherit; height: auto; outline: none; overflow-y: auto; tab-size: 4; text-align: left; overflow-wrap: break-word; cursor: text; min-height: 0px; max-height: none; font-family: &amp;quot;Open Sans&amp;quot;, sans-serif; color: rgb(38, 38, 38); font-size: 14px; background-color: rgb(255, 255, 255);&quot; id=&quot;bb-editor-textbox&quot; data-gramm=&quot;false&quot; class=&quot;ql-editor bb-editor&quot;&gt;&lt;p style=&quot;box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); margin: 0px; padding: 0px; font-family: inherit; font-size: 0.875rem; line-height: inherit; text-rendering: optimizelegibility; overflow-wrap: break-word; cursor: text; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0;&quot;&gt;Using Diagrams.net create a UML diagram to document the architecture and top-level overview of the relationships between entities in your text-based adventure game.&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-10" width="470" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-2" value="Location" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-60" y="60" width="160" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-3" value="- North: Location&amp;nbsp;&lt;br&gt;- East: Location&lt;br&gt;- South: Location&lt;br&gt;- West: Location&lt;br&gt;- Description: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-2" vertex="1">
+          <mxGeometry y="26" width="160" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="KohGji0QIOgP2t7-RK-n-2" vertex="1">
+          <mxGeometry y="180" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-6" value="Player" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="160" y="60" width="160" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-7" value="- name: string&lt;br&gt;- inventory: list&lt;br&gt;- dead: bool&lt;br&gt;- map: map&amp;nbsp;&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-6" vertex="1">
+          <mxGeometry y="26" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="KohGji0QIOgP2t7-RK-n-6" vertex="1">
+          <mxGeometry y="90" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-9" value="+ add_inventory(items:list, parts: list, tools: list): None&lt;br&gt;+ is_maybe_dead(): None&lt;br&gt;+ add_map(): None&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-6" vertex="1">
+          <mxGeometry y="98" width="160" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-14" value="Car" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="60" width="220" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-15" value="- parts: list&lt;br&gt;- tools : list&lt;br&gt;- engine : engine&lt;br&gt;- treasure_map : list" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-14" vertex="1">
+          <mxGeometry y="26" width="220" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="KohGji0QIOgP2t7-RK-n-14" vertex="1">
+          <mxGeometry y="120" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-17" value="+ add_tool(tool: str): None&lt;br&gt;+ add_part(part: str): None&lt;br&gt;+ fix_engine(): None&lt;br&gt;+ drive(): None&amp;nbsp;&lt;br&gt;+ add_treasure_map(treasure_map: list)&lt;br&gt;+ open_treasure_map():&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-14" vertex="1">
+          <mxGeometry y="128" width="220" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-19" value="Engine" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="60" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-20" value="- is_fixed : bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-19" vertex="1">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-21" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="KohGji0QIOgP2t7-RK-n-19" vertex="1">
+          <mxGeometry y="52" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-22" value="+ fix(): None" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-19" vertex="1">
+          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-24" value="Classname" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-60" y="320" width="160" height="278" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-25" value="- player: player&lt;br&gt;- car : car&lt;br&gt;- inventory: list&lt;br&gt;- current_Location : location" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-24" vertex="1">
+          <mxGeometry y="26" width="160" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-26" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="KohGji0QIOgP2t7-RK-n-24" vertex="1">
+          <mxGeometry y="130" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="KohGji0QIOgP2t7-RK-n-27" value="+ __init__(player: player): None&lt;br&gt;+ move(direction: str): None&lt;br&gt;+ game_loop(): None&lt;br&gt;+ search(): None" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KohGji0QIOgP2t7-RK-n-24" vertex="1">
+          <mxGeometry y="138" width="160" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
